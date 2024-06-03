@@ -24,9 +24,5 @@ export const DUMY_USERS = [
         name: 'Ahmed',
         avatar: 'user-1.jpg',
     },
-    {
-        id: 'u1',
-        name: 'Mahmoud',
-        avatar: 'user-1.jpg',
-    },
+
 ]
