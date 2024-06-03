@@ -25,17 +25,16 @@ export class NewTaskComponent {
   }
 
   onSubmitForm() {
-    this._tasksService.addTask({
-      title: this.enteredTitle(),
-      summary: this.enteredSummary(),
-      date: this.enteredDate(),
-    }, this.userId())
-    this.onCancel()
-    // this.add.emit({
-    //   title: this.enteredTitle(),
-    //   summary: this.enteredSummary(),
-    //   date: this.enteredDate(),
-    // })
+    if (this.enteredSummary() == '' || this.enteredTitle() == '' || this.enteredDate() == '') {
+      alert('Please Full The Form 😊😊 ')
+    } else {
+      this._tasksService.addTask({
+        title: this.enteredTitle(),
+        summary: this.enteredSummary(),
+        date: this.enteredDate(),
+      }, this.userId())
+      this.onCancel()
+    }
 
   }
 }
